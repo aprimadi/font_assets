@@ -4,10 +4,10 @@ require 'font_assets/mime_types'
 module FontAssets
   class Middleware
 
-    def initialize(app, origin, options={})
+    def initialize(app)
       @app = app
-      @origin = origin
-      @options = options
+      @origin = FontAssets::Config.origin
+      @options = FontAssets::Config.options
       @mime_types = FontAssets::MimeTypes.new(Rack::Mime::MIME_TYPES)
     end
 

@@ -1,5 +1,6 @@
 require 'rack'
 require 'font_assets/mime_types'
+require 'font_assets/config'
 
 module FontAssets
   class Middleware
